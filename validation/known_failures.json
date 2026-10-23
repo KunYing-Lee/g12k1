@@ -1,5 +1,5 @@
 {
-  "scope": "Observed on original R9 during the continued full dataset run; not a refactor regression. No accepted output was published.",
+  "scope": "Snapshot from the continuing full dataset run. Every listed motion was rejected and published no accepted output. Per-entry evidence distinguishes reproduced original-R9 failures from unresolved attribution.",
   "failures": [
     {
       "member": "g1/csv/230509/warm_up_legs_R_002__A361_M.csv",
@@ -10,7 +10,53 @@
       "error_type": "RuntimeError",
       "error": "Schwarz conditional problem did not converge: {'start': 960, 'end': 1088, 'converged': False, 'iterations': 200, 'objective_before': np.float64(4637.164272470836), 'objective_after': np.float64(4258.872571253524), 'violation_before': 7.695430134175077e-07, 'violation_after': 2.2252622054047544e-10, 'stationarity': 0.06642707969765609}",
       "expected_frames": 2304,
-      "frames": 2304
+      "frames": 2304,
+      "current_release_observation": {
+        "member": "g1/csv/230509/warm_up_legs_R_002__A361_M.csv",
+        "source_sha256": "d9ae642a01212721b844dba6299b4abb41285214ac85e0a81fb500eb28530fb4",
+        "status": "failed",
+        "fps": 120,
+        "producer_sha256": "a283a780fb2e81bdeeea394978f66eeedf5cdf336c0a81aeb825dd27ac7950a0",
+        "error_type": "RuntimeError",
+        "error": "Schwarz conditional problem did not converge: {'start': 960, 'end': 1088, 'converged': False, 'iterations': 200, 'objective_before': np.float64(4637.164430856658), 'objective_after': np.float64(4258.872765207268), 'violation_before': 7.695425918274445e-07, 'violation_after': 2.2253026439773838e-10, 'stationarity': 0.06642700968784483}",
+        "expected_frames": 2304,
+        "frames": 2304
+      }
+    },
+    {
+      "member": "g1/csv/230509/dancing_routine_V001_003__A361_M.csv",
+      "source_sha256": "6579edfb59783f951a516591ef8d77df6b5d679550146d55c1ca346db0aed210",
+      "status": "failed",
+      "fps": 120,
+      "producer_sha256": "a283a780fb2e81bdeeea394978f66eeedf5cdf336c0a81aeb825dd27ac7950a0",
+      "error_type": "RuntimeError",
+      "error": "Trajectory QP did not converge",
+      "expected_frames": 1695,
+      "frames": 1695,
+      "attribution": "Observed in the continuing full run; original-R9 comparison and root cause remain pending."
+    },
+    {
+      "member": "g1/csv/230509/warm_up_legs_R_004__A361.csv",
+      "source_sha256": "aa5c3fa83abc963a83ec2725417c27354959d529118ac9e1f159e089ff56176f",
+      "status": "failed",
+      "fps": 120,
+      "producer_sha256": "a283a780fb2e81bdeeea394978f66eeedf5cdf336c0a81aeb825dd27ac7950a0",
+      "error_type": "NoSolutionFound",
+      "error": "QP solver daqp failed to find a solution.",
+      "expected_frames": 2489,
+      "frames": 816,
+      "original_r9_reproduction": {
+        "member": "g1/csv/230509/warm_up_legs_R_004__A361.csv",
+        "source_sha256": "aa5c3fa83abc963a83ec2725417c27354959d529118ac9e1f159e089ff56176f",
+        "status": "failed",
+        "fps": 120,
+        "producer_sha256": "09909a3ea5d660da4a35348dbe1803d03b3aeec2a6d268ac617c3f0aa26342eb",
+        "error_type": "NoSolutionFound",
+        "error": "QP solver daqp failed to find a solution.",
+        "expected_frames": 2489,
+        "frames": 816
+      },
+      "attribution": "Same original-R9 exception after the same 816 initialized frames on the same input and host."
     }
   ]
 }

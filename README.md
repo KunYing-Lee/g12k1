@@ -99,7 +99,7 @@ The six-run complete-motion benchmark accepted **576/576 runs** and produced exa
 
 Selected **48×2** by median completion time. See `validation/concurrency_g1.json` for raw timings, identity and container resource counters. These are measurements on this sample, not a full-dataset ETA. Static ownership excludes already accepted original, regression and benchmark artifacts; alpha remains at 8×2.
 
-During the original R9 full run, `warm_up_legs_R_002__A361_M` failed to converge in block 960:1088 after 200 iterations (stationarity 0.0664). It was not published as accepted. This is retained in `validation/known_failures.json`; the fixed release does not claim universal convergence or change the acceptance standard.
+During the original R9 full run, `warm_up_legs_R_002__A361_M` failed to converge in block 960:1088 after 200 iterations (stationarity 0.0664). It was not published as accepted. This is retained in `validation/known_failures.json`; the fixed release does not claim universal convergence or change the acceptance standard. The ongoing full run also rejected `warm_up_legs_R_004__A361` (DAQP failure, reproduced on original R9 after the same 816 initialized frames) and `dancing_routine_V001_003__A361_M` (trajectory QP failure, attribution pending).
 
 ## Code map
 
