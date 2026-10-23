@@ -85,6 +85,20 @@ Drain old managers before producing the verified completed-artifact ledger. Run 
 
 The benchmark runs `16×2, 32×2, 48×2, 48×2, 32×2, 16×2` on identical complete motions, with a common 72,000-frame admission budget. It checks every acceptance record, output checksum and exact numerical agreement across configurations. Selection uses median total completion time, including process startup, preparation, solving, validation and publication. Resource samples include container CPU/memory pressure.
 
+## Measured g1 concurrency
+
+The six-run complete-motion benchmark accepted **576/576 runs** and produced exactly equal motion arrays across configurations. Each run covered **96 clips / 65,768 frames**. The fixed production code remains the `r9.0.0` tag.
+
+| Clip workers × frame workers | First run (s) | Reverse run (s) | Median (s) | Clips/hour |
+|---|---:|---:|---:|---:|
+| 16×2 | 830.7 | 830.7 | 830.7 | 416.0 |
+| 32×2 | 640.6 | 640.6 | 640.6 | 539.5 |
+| 48×2 | 585.5 | 585.5 | 585.5 | 590.3 |
+
+Selected **48×2** by median completion time. See `validation/concurrency_g1.json` for raw timings, identity and container resource counters. These are measurements on this sample, not a full-dataset ETA. Static ownership excludes already accepted original, regression and benchmark artifacts; alpha remains at 8×2.
+
+During the original R9 full run, `warm_up_legs_R_002__A361_M` failed to converge in block 960:1088 after 200 iterations (stationarity 0.0664). It was not published as accepted. This is retained in `validation/known_failures.json`; the fixed release does not claim universal convergence or change the acceptance standard.
+
 ## Code map
 
 - `source.py`: strict Bones input conversion.

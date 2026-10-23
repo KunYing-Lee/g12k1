@@ -1,0 +1,16 @@
+{
+  "scope": "Observed on original R9 during the continued full dataset run; not a refactor regression. No accepted output was published.",
+  "failures": [
+    {
+      "member": "g1/csv/230509/warm_up_legs_R_002__A361_M.csv",
+      "source_sha256": "d9ae642a01212721b844dba6299b4abb41285214ac85e0a81fb500eb28530fb4",
+      "status": "failed",
+      "fps": 120,
+      "producer_sha256": "09909a3ea5d660da4a35348dbe1803d03b3aeec2a6d268ac617c3f0aa26342eb",
+      "error_type": "RuntimeError",
+      "error": "Schwarz conditional problem did not converge: {'start': 960, 'end': 1088, 'converged': False, 'iterations': 200, 'objective_before': np.float64(4637.164272470836), 'objective_after': np.float64(4258.872571253524), 'violation_before': 7.695430134175077e-07, 'violation_after': 2.2252622054047544e-10, 'stationarity': 0.06642707969765609}",
+      "expected_frames": 2304,
+      "frames": 2304
+    }
+  ]
+}

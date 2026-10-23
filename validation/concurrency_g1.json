@@ -1,0 +1,199 @@
+{
+  "algorithm_tag": "r9.0.0",
+  "algorithm_commit": "aacd8e9020cb4f94725e76e3b0e8179673d16c85",
+  "host": "g1",
+  "cpu": "2 x AMD EPYC 9654; 192 physical / 384 logical CPUs; 200 CPU cgroup quota",
+  "memory_limit_gib": 500,
+  "protocol": "Identical 96 complete clips, 65768 frames; 16,32,48,48,32,16 workers; 2 frame workers; 72000 admitted frame budget; total completion time includes startup/preparation/solve/audit/publication",
+  "selection": {
+    "workers": 48,
+    "frame_workers": 2,
+    "median_seconds": {
+      "16": 830.711828710977,
+      "32": 640.5847205971368,
+      "48": 585.5121099569369
+    },
+    "clips_per_hour": 590.2525227452907,
+    "producer_sha256": "a283a780fb2e81bdeeea394978f66eeedf5cdf336c0a81aeb825dd27ac7950a0",
+    "input_manifest_sha256": "f66ef9b06626b91a7a632553bb45cd73b8b2ef857706bd6cc78c81fd7ff9e3ed",
+    "accepted_runs": 576,
+    "max_qpos_difference": 0.0
+  },
+  "results": [
+    {
+      "round": 0,
+      "workers": 16,
+      "frame_workers": 2,
+      "clips": 96,
+      "frames": 65768,
+      "seconds": 830.7071385798045,
+      "clips_per_hour": 416.0310944129426,
+      "max_qpos_difference": 0.0
+    },
+    {
+      "round": 1,
+      "workers": 32,
+      "frame_workers": 2,
+      "clips": 96,
+      "frames": 65768,
+      "seconds": 640.5541293760762,
+      "clips_per_hour": 539.5328578033326,
+      "max_qpos_difference": 0.0
+    },
+    {
+      "round": 2,
+      "workers": 48,
+      "frame_workers": 2,
+      "clips": 96,
+      "frames": 65768,
+      "seconds": 585.5149904587306,
+      "clips_per_hour": 590.2496189367149,
+      "max_qpos_difference": 0.0
+    },
+    {
+      "round": 3,
+      "workers": 48,
+      "frame_workers": 2,
+      "clips": 96,
+      "frames": 65768,
+      "seconds": 585.5092294551432,
+      "clips_per_hour": 590.2554265824377,
+      "max_qpos_difference": 0.0
+    },
+    {
+      "round": 4,
+      "workers": 32,
+      "frame_workers": 2,
+      "clips": 96,
+      "frames": 65768,
+      "seconds": 640.6153118181974,
+      "clips_per_hour": 539.4813293162108,
+      "max_qpos_difference": 0.0
+    },
+    {
+      "round": 5,
+      "workers": 16,
+      "frame_workers": 2,
+      "clips": 96,
+      "frames": 65768,
+      "seconds": 830.7165188421495,
+      "clips_per_hour": 416.0263966842701,
+      "max_qpos_difference": 0.0
+    }
+  ],
+  "container_resource_samples": [
+    {
+      "round": 0,
+      "workers": 16,
+      "seconds": 830.7071385798045,
+      "container_mean_cpu_cores": 20.478726677147417,
+      "container_peak_cpu_cores": 36.22860575259407,
+      "container_peak_memory_gib": 238.8194694519043,
+      "container_peak_anonymous_memory_gib": 34.912437438964844,
+      "throttled_usec": 0,
+      "memory_event_delta": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      }
+    },
+    {
+      "round": 1,
+      "workers": 32,
+      "seconds": 640.5541293760762,
+      "container_mean_cpu_cores": 24.643077217211214,
+      "container_peak_cpu_cores": 58.59100182737469,
+      "container_peak_memory_gib": 257.8881645202637,
+      "container_peak_anonymous_memory_gib": 53.18054962158203,
+      "throttled_usec": 494636,
+      "memory_event_delta": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      }
+    },
+    {
+      "round": 2,
+      "workers": 48,
+      "seconds": 585.5149904587306,
+      "container_mean_cpu_cores": 26.524312609058097,
+      "container_peak_cpu_cores": 80.42979633837541,
+      "container_peak_memory_gib": 278.0130615234375,
+      "container_peak_anonymous_memory_gib": 72.40000915527344,
+      "throttled_usec": 13143782,
+      "memory_event_delta": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      }
+    },
+    {
+      "round": 3,
+      "workers": 48,
+      "seconds": 585.5092294551432,
+      "container_mean_cpu_cores": 26.619975870750768,
+      "container_peak_cpu_cores": 80.99261015841897,
+      "container_peak_memory_gib": 278.059268951416,
+      "container_peak_anonymous_memory_gib": 71.80275344848633,
+      "throttled_usec": 15776786,
+      "memory_event_delta": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      }
+    },
+    {
+      "round": 4,
+      "workers": 32,
+      "seconds": 640.6153118181974,
+      "container_mean_cpu_cores": 24.55715521591318,
+      "container_peak_cpu_cores": 57.51363708357003,
+      "container_peak_memory_gib": 259.40148544311523,
+      "container_peak_anonymous_memory_gib": 52.6231575012207,
+      "throttled_usec": 14417905,
+      "memory_event_delta": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      }
+    },
+    {
+      "round": 5,
+      "workers": 16,
+      "seconds": 830.7165188421495,
+      "container_mean_cpu_cores": 20.477528028502313,
+      "container_peak_cpu_cores": 35.6704761567068,
+      "container_peak_memory_gib": 242.29152297973633,
+      "container_peak_anonymous_memory_gib": 34.73981857299805,
+      "throttled_usec": 733338,
+      "memory_event_delta": {
+        "low": 0,
+        "high": 0,
+        "max": 0,
+        "oom": 0,
+        "oom_kill": 0,
+        "oom_group_kill": 0
+      }
+    }
+  ],
+  "limitations": [
+    "Only this fixed sample was timed; it is not a full-dataset completion estimate.",
+    "Container resource counters include existing unrelated workloads.",
+    "The final slow clip remains included in every run."
+  ]
+}
