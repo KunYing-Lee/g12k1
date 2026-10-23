@@ -1,0 +1,10 @@
+{
+  "source_member": "g1/csv/230509/jog_ff_loop_180_R_003__A360_M.csv",
+  "source_sha256": "d139aa4b427394009de585206fc8ee929ca4e48860afb242fb25497cdffb9a80",
+  "producer_sha256": "197c443df026b30ebc9b83df44612de304b4949759f14e0ee5d0bb9ae7c7ed7b",
+  "frame": 0,
+  "phase": "initialization",
+  "maximum_ground_penetration_m": 0.04536315246717748,
+  "diagnosis": "The original trust-box linear subproblem is infeasible; a bounded L1 normal step reduces geometric infeasibility while retaining hard equalities and joint bounds.",
+  "fixture_sha256": "134791dc1168343411861836d7a5199f5a771e18f3f1a9a959807d25b6a88144"
+}

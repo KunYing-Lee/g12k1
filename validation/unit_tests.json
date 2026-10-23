@@ -1,0 +1,15 @@
+{
+  "linux": {
+    "python": "3.14.6",
+    "passed": 62,
+    "failed": 0,
+    "skipped": 0
+  },
+  "macos_development": {
+    "python": "3.11.14",
+    "passed": 61,
+    "failed": 0,
+    "skipped": 1
+  },
+  "notes": "Linux fork parallelism is exercised on Linux; macOS is not the certified production environment."
+}

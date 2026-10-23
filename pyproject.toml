@@ -1,0 +1,8 @@
+[project]
+name = "g12k1"
+version = "9.0.0"
+description = "Validated R9 Bones G1 to Booster K1 retargeting"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

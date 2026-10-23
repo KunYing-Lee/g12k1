@@ -1,0 +1,21 @@
+{
+  "python": "3.14.6 (main, Aug  4 2026, 18:27:20) [Clang 22.1.3 ]",
+  "architecture": "x86_64",
+  "libc": [
+    "glibc",
+    "2.31"
+  ],
+  "compiler": "gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0",
+  "producer_sha256": "a283a780fb2e81bdeeea394978f66eeedf5cdf336c0a81aeb825dd27ac7950a0",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "mujoco": "3.12.0",
+    "mink": "1.3.0",
+    "qpsolvers": "4.13.0",
+    "daqp": "0.9.1",
+    "clarabel": "0.11.1",
+    "cffi": "2.1.1",
+    "setuptools": "84.2.1"
+  }
+}

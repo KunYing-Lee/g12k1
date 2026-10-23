@@ -1,0 +1,306 @@
+robot_xml_path: "asset/robot/booster_k1/K1_22dof.xml"
+verbose: True
+render_debug: False
+keypoints_path: "output_data/keypoints/booster_k1/walk_forward_loop_002__A022_from_g1_keypoints.pkl"
+
+# Collision-feasible backtracking can make an accepted IK step much smaller
+# than the unconstrained step. Use a numerical convergence threshold so the
+# solver continues refining the pose instead of treating that small step as a
+# converged frame.
+max_ik_iterations: 50
+ik_convergence_tolerance: 1.0e-6
+
+# K1's serial model has 22 actuated joints: two head joints, four joints per
+# arm, and six joints per leg. Keep the physical MJCF limits unchanged; the
+# source motion, rather than a synthetic offset, determines knee flexion.
+joints_limit_offset_degrees: {}
+knee_angle_offset_degrees: 0.0
+enable_knee_angle_offset_degrees: false
+
+# Preserve G1's world-frame horizontal trajectory exactly. Morphology scaling
+# remains appropriate for vertical motion, after which contact grounding places
+# the K1 soles on the physical floor.
+root_displacement_scaling:
+  x: preserve_source
+  y: preserve_source
+  z: leg_length
+
+# Treat the source robot's world-frame horizontal root coordinates as exact IK
+# equality constraints. This prevents soft body/contact tasks from shrinking
+# the commanded trajectory after replay has preserved it.
+root_trajectory_constraint:
+  enabled: true
+  axes: [x, y]
+
+# Semantic source links are represented by pairs of K1 body frames.  The
+# shoulder and arm endpoints match the G1 source semantics used by
+# robot_replay.py; K1's head is held by its two target head frames because the
+# AMP G1 source motion has no actuated head joints.
+# The hip anchors use K1's rest-frame offsets before propagating the source
+# thigh/calf motion. This preserves K1's real pelvis-to-hip geometry instead of
+# forcing G1's different fixed hip offset onto the target skeleton.
+target_rest_anchor_links: [left_hip, right_hip]
+
+robot_links:
+  left_hip: [Trunk, Left_Hip_Roll]
+  left_thigh: [Left_Hip_Roll, Left_Shank]
+  left_calf: [Left_Shank, left_foot_link]
+
+  right_hip: [Trunk, Right_Hip_Roll]
+  right_thigh: [Right_Hip_Roll, Right_Shank]
+  right_calf: [Right_Shank, right_foot_link]
+
+  neck: [Trunk, Head_1]
+  head: [Head_1, Head_2]
+
+  left_shoulder: [Head_1, Left_Arm_2]
+  left_arm: [Left_Arm_2, left_hand_link]
+  left_fore_arm: [left_hand_link, left_hand_end_link]
+
+  right_shoulder: [Head_1, Right_Arm_2]
+  right_arm: [Right_Arm_2, right_hand_link]
+  right_fore_arm: [right_hand_link, right_hand_end_link]
+
+# The foot-end and toe frames are massless semantic frames added to the K1
+# MJCF at the corresponding contact locations.  They let the generic contact
+# locking stage use the same six source contact channels as the G1 config.
+contact_links: [left_foot_end_link, left_toe_link,
+                right_foot_end_link, right_toe_link,
+                left_hand_end_link, right_hand_end_link]
+
+contact_vel_calculate_window: 6
+contact_vel_threshold: 0.5
+contact_height_threshold: 0.025
+contact_height_lpf_alpha: 0.15
+contact_pos_fixed_factor: 15.0
+
+# Match current source articulation, rather than a neutral or previous pose.
+# Axis signs and offsets express G1's Y-X-Z-Y arm in K1's Y-X-Y-Z chain:
+# K1 arms-out zero differs from G1 arms-down / forearms-forward zero.
+# Differences in fixed link offsets remain soft Cartesian/orientation errors.
+posture_regularization:
+  enabled: true
+  reference: source
+  gain: 1.0
+  lm_damping: 0.0
+  joint_costs:
+    ALeft_Shoulder_Pitch: 5.0
+    Left_Shoulder_Roll: 5.0
+    Left_Elbow_Pitch: 5.0
+    Left_Elbow_Yaw: 5.0
+    ARight_Shoulder_Pitch: 5.0
+    Right_Shoulder_Roll: 5.0
+    Right_Elbow_Pitch: 5.0
+    Right_Elbow_Yaw: 5.0
+    Left_Hip_Pitch: 5.0
+    Left_Hip_Roll: 5.0
+    Left_Hip_Yaw: 5.0
+    Left_Knee_Pitch: 5.0
+    Left_Ankle_Pitch: 5.0
+    Left_Ankle_Roll: 5.0
+    Right_Hip_Pitch: 5.0
+    Right_Hip_Roll: 5.0
+    Right_Hip_Yaw: 5.0
+    Right_Knee_Pitch: 5.0
+    Right_Ankle_Pitch: 5.0
+    Right_Ankle_Roll: 5.0
+  joint_map:
+    ALeft_Shoulder_Pitch: [left_shoulder_pitch_joint, 1.0, 0.0]
+    Left_Shoulder_Roll: [left_shoulder_roll_joint, 1.0, -90.0]
+    Left_Elbow_Pitch: [left_shoulder_yaw_joint, -1.0, 0.0]
+    Left_Elbow_Yaw: [left_elbow_joint, 1.0, -90.0]
+    ARight_Shoulder_Pitch: [right_shoulder_pitch_joint, 1.0, 0.0]
+    Right_Shoulder_Roll: [right_shoulder_roll_joint, 1.0, 90.0]
+    Right_Elbow_Pitch: [right_shoulder_yaw_joint, 1.0, 0.0]
+    Right_Elbow_Yaw: [right_elbow_joint, -1.0, 90.0]
+    Left_Hip_Pitch: [left_hip_pitch_joint, 1.0, 0.0]
+    Left_Hip_Roll: [left_hip_roll_joint, 1.0, 0.0]
+    Left_Hip_Yaw: [left_hip_yaw_joint, 1.0, 0.0]
+    Left_Knee_Pitch: [left_knee_joint, 1.0, 0.0]
+    Left_Ankle_Pitch: [left_ankle_pitch_joint, 1.0, 0.0]
+    Left_Ankle_Roll: [left_ankle_roll_joint, 1.0, 0.0]
+    Right_Hip_Pitch: [right_hip_pitch_joint, 1.0, 0.0]
+    Right_Hip_Roll: [right_hip_roll_joint, 1.0, 0.0]
+    Right_Hip_Yaw: [right_hip_yaw_joint, 1.0, 0.0]
+    Right_Knee_Pitch: [right_knee_joint, 1.0, 0.0]
+    Right_Ankle_Pitch: [right_ankle_pitch_joint, 1.0, 0.0]
+    Right_Ankle_Roll: [right_ankle_roll_joint, 1.0, 0.0]
+
+temporal_regularization:
+  enabled: false
+
+# Jointly fit the complete motion, including observed source articulation
+# velocities. This penalizes D(q-source), not Dq, so source motion is retained.
+# No output smoothing or post-solve ground registration is applied.
+trajectory_fitting:
+  enabled: true
+  velocity_cost: 0.5
+  max_iterations: 200
+
+# Enforce whole-robot self non-penetration inside the IK solve. Collision pairs
+# come from the K1 MJCF collision geometry and masks; Mink removes same-body,
+# welded, and direct parent-child pairs. A 1 mm clearance absorbs collision
+# distance roundoff while still allowing intentional support during get-up.
+self_collision_avoidance:
+  enabled: true
+  disable_frame_bound: true
+  distance_tolerance: 1.0e-10
+  distance_iterations: 100
+  minimum_distance: 0.001
+  detection_distance: 0.03
+  gain: 0.85
+  recovery_gain: 0.5
+  bound_relaxation: 0.0
+  broadphase: true
+  tolerance: 1.0e-5
+  max_backtracks: 12
+  trust_region:
+    max_free_translation_step: 0.02
+    max_free_rotation_step: 0.05
+    max_joint_step: 0.05
+  frame_trust_region:
+    max_free_translation_step: 0.20
+    max_free_rotation_step: 0.25
+    max_joint_step: 0.25
+
+# Enforce the physical floor as a unilateral kinematic constraint. The exact
+# whole-body support geometry enters the SQP inequalities and merit function.
+# No root-height projection or trajectory registration is applied in this mode.
+ground_nonpenetration:
+  enabled: true
+  whole_body: true
+  geoms: [left_foot_collision, right_foot_collision]
+  height: 0.0
+  tolerance: 1.0e-9
+
+# Register the solved floating-base trajectory to G1's semantic support phases.
+# Frames with any support are equality anchors for the physically lowest K1
+# sole; flight-frame offsets interpolate between anchors and remain subject to
+# the unilateral collision-box floor constraint. Left/right contact identity
+# remains an IK objective rather than an infeasible root-translation constraint.
+contact_grounding:
+  enabled: false
+  geom_contact_names:
+    left_foot_collision: [left_foot_end, left_toe]
+    right_foot_collision: [right_foot_end, right_toe]
+
+ik_match_table: {
+  "hips_mean": ["Trunk", 100, 5],
+
+  "left_hip": ["Left_Hip_Roll", 0.0, 3.0],
+  "left_thigh": ["Left_Shank", 0.0, 3.0],
+  "left_calf": ["left_foot_link", 40, 5],
+
+  "right_hip": ["Right_Hip_Roll", 0.0, 3.0],
+  "right_thigh": ["Right_Shank", 0.0, 3.0],
+  "right_calf": ["right_foot_link", 40, 5],
+
+  "head": ["Head_2", 0.0, 0.5],
+
+  "left_shoulder": ["Left_Arm_2", 0.0, 5.0],
+  "left_arm": ["left_hand_link", 15.0, 0.0],
+  "left_fore_arm": ["left_hand_end_link", 20.0, 0.0],
+
+  "right_shoulder": ["Right_Arm_2", 0.0, 5.0],
+  "right_arm": ["right_hand_link", 15.0, 0.0],
+  "right_fore_arm": ["right_hand_end_link", 20.0, 0.0]
+}
+
+# K1's raw MuJoCo body frames are identity-oriented in the neutral pose.  The
+# maps below are the same canonical semantic-frame maps used by the G1 source;
+# using the same source/target maps makes a neutral G1 frame remain neutral on
+# K1 while still passing through the generic key-frame conversion path.
+key_frame_config:
+  hips_mean:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  left_up_leg:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  left_leg:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  left_foot:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  right_up_leg:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  right_leg:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  right_foot:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  shoulder_mean:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+  left_arm:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [0.0, 1.0, 0.0]
+      z: [-1.0, 0.0, 0.0]
+  left_fore_arm:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [1.0, 0.0, 0.0]
+      y: [0.0, 1.0, 0.0]
+      z: [0.0, 0.0, 1.0]
+  left_hand:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [1.0, 0.0, 0.0]
+      y: [0.0, 1.0, 0.0]
+      z: [0.0, 0.0, 1.0]
+  right_arm:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [0.0, -1.0, 0.0]
+      z: [1.0, 0.0, 0.0]
+  right_fore_arm:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [-1.0, 0.0, 0.0]
+      y: [0.0, -1.0, 0.0]
+      z: [0.0, 0.0, 1.0]
+  right_hand:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [-1.0, 0.0, 0.0]
+      y: [0.0, -1.0, 0.0]
+      z: [0.0, 0.0, 1.0]
+  head:
+    offset_deg_xyz: [0.0, 0.0, 0.0]
+    axis_map_cols:
+      x: [0.0, 0.0, 1.0]
+      y: [1.0, 0.0, 0.0]
+      z: [0.0, 1.0, 0.0]
+
+# Model-derived anatomical frames: G1 arms-down vs K1 arms-out rest geometry.
+rest_frame_calibration_links: [left_shoulder, left_arm, left_fore_arm, right_shoulder, right_arm, right_fore_arm]

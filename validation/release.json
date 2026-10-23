@@ -1,0 +1,372 @@
+{
+  "passed": true,
+  "created_at": 1792775308.4795408,
+  "producer_sha256": "a283a780fb2e81bdeeea394978f66eeedf5cdf336c0a81aeb825dd27ac7950a0",
+  "original_producer_sha256": "09909a3ea5d660da4a35348dbe1803d03b3aeec2a6d268ac617c3f0aa26342eb",
+  "validation_count": 45,
+  "validation_frames": 43009,
+  "exact_numeric_parity": true,
+  "acceptance_sha256": "e75914144ba9a0c0c9ab0ec11d6c3338e771ec69b84167b2f34c45f98a1ca6c5",
+  "comparisons": [
+    {
+      "member": "g1/csv/230509/shadow_boxing_R_003__A361.csv",
+      "source_sha256": "05c2a2302d1d9faa0401ad062beb5d04a6e98fb0185a5e73a1d959feb1166ab9",
+      "frames": 1436,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "cb5345946ec8bfca212a6bec0480fcf7f760e6a87a0db7acbdbe34f14476c4a1",
+      "output_sha256": "cb5345946ec8bfca212a6bec0480fcf7f760e6a87a0db7acbdbe34f14476c4a1"
+    },
+    {
+      "member": "g1/csv/230509/jump_ff_180_R_004__A359.csv",
+      "source_sha256": "aab61f41333797a613fb267fa9a7912dafc6d4c9300ae6ca9a9bfa11ef2b7a9b",
+      "frames": 262,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "da1bbbcb8495a6fe9b8b2d8e7a7654bb1e1a617a414ed26cf31abbd04d57117a",
+      "output_sha256": "da1bbbcb8495a6fe9b8b2d8e7a7654bb1e1a617a414ed26cf31abbd04d57117a"
+    },
+    {
+      "member": "g1/csv/230509/jog_butt_kick_R_start_001__A360.csv",
+      "source_sha256": "527b5304b93ffcff92f6255da9fd0539f58f5b6e0ee95af0c1c23ba22254c0b4",
+      "frames": 593,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "0609e4d90d8b367d3557f02ba3c7cecf528cfb1bc489dbf1e35752619e6eb443",
+      "output_sha256": "0609e4d90d8b367d3557f02ba3c7cecf528cfb1bc489dbf1e35752619e6eb443"
+    },
+    {
+      "member": "g1/csv/230509/warm_up_legs_R_004__A361_M.csv",
+      "source_sha256": "ec16f1a445c5eec8f91bef1f4f4d21e11de2929e0468dbf68c9a7661917cb7fd",
+      "frames": 2489,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "55f890a7e6142be7675cc9e4a518a18ab2c5f0daae075382fbe1c672d4ba3a44",
+      "output_sha256": "55f890a7e6142be7675cc9e4a518a18ab2c5f0daae075382fbe1c672d4ba3a44"
+    },
+    {
+      "member": "g1/csv/230509/toe_touchers_001__A361.csv",
+      "source_sha256": "2a4c88f1ebfa75e15faaa22b522e8bda395b955b85af9e3cf3157a2e97be7133",
+      "frames": 969,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "2e4a42df19a0cbbd18faa8e1f7475a2d8df43ba05d26746bd2e5bb3f29736f71",
+      "output_sha256": "2e4a42df19a0cbbd18faa8e1f7475a2d8df43ba05d26746bd2e5bb3f29736f71"
+    },
+    {
+      "member": "g1/csv/230509/jog_ff_loop_180_R_002__A361.csv",
+      "source_sha256": "40df28cc4ca5c04a8a8a9570fd1865ddd1d7fc46377788ca5afa3c2a8fb3d27c",
+      "frames": 433,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "2d1bb1697a66acf037aef5e310022a3c2b0798e13ba30db25d6d5a8e6ad75607",
+      "output_sha256": "2d1bb1697a66acf037aef5e310022a3c2b0798e13ba30db25d6d5a8e6ad75607"
+    },
+    {
+      "member": "g1/csv/230509/scissor_kick_R_002__A359.csv",
+      "source_sha256": "53dc314eea9d7ba8c9589b526a420b16aab454ba6bf8fc9a4ea600bdc9c216e5",
+      "frames": 855,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "a42b8a68e253b679e03830c29f11b04b3501ca1dfb75c1135acc06cdb677b664",
+      "output_sha256": "a42b8a68e253b679e03830c29f11b04b3501ca1dfb75c1135acc06cdb677b664"
+    },
+    {
+      "member": "g1/csv/230509/scissor_kick_R_002__A362_M.csv",
+      "source_sha256": "6c786d573e33c1afdcb194196630c7ad9b355b8b6816cdf41d10e47f24f2cee0",
+      "frames": 556,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "af1553e7af827871184bb6bc69fd75f4963fa8195a82c31a0ef9b237629404d5",
+      "output_sha256": "af1553e7af827871184bb6bc69fd75f4963fa8195a82c31a0ef9b237629404d5"
+    },
+    {
+      "member": "g1/csv/230509/jog_ff_stop_180_R_002__A361_M.csv",
+      "source_sha256": "93b5fdf8a80e75bfed73bc7fe3681a8194dead40ac5c5c746263e402a4af12cd",
+      "frames": 568,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "b59695104dd810eea59b1c4105e008aa7211767e8c33ac90bbc69cf5bb7671bc",
+      "output_sha256": "b59695104dd810eea59b1c4105e008aa7211767e8c33ac90bbc69cf5bb7671bc"
+    },
+    {
+      "member": "g1/csv/230509/spider_crawl_R_004__A362_M.csv",
+      "source_sha256": "fc841ca8ba99190916e57a4d90fb475a11d5b62040dc7ea84b0b25753cffc59c",
+      "frames": 1151,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "8b696a8c574e15a82e4c07b75c5f4c735b1188f296c3293fb14d538154b18bcf",
+      "output_sha256": "8b696a8c574e15a82e4c07b75c5f4c735b1188f296c3293fb14d538154b18bcf"
+    },
+    {
+      "member": "g1/csv/230509/scissor_kick_R_003__A359.csv",
+      "source_sha256": "e2ccebe12d284b945adaa594d4a4fb6fa91a8131f4df791be072eeb276bdd4f4",
+      "frames": 670,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "7488f6687969b00eabd10c27f3316485a9cf417c17ccd6ebbef7121d45c7a21c",
+      "output_sha256": "7488f6687969b00eabd10c27f3316485a9cf417c17ccd6ebbef7121d45c7a21c"
+    },
+    {
+      "member": "g1/csv/230509/jog_ff_loop_180_R_003__A361.csv",
+      "source_sha256": "f8bfb42e16e22d3d56263e78b2d6274f3c533a71fdd96031d570fe4eaefa214f",
+      "frames": 468,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "8b9b03f9777d247f5207a07c31a520a79f6d44bfcdcba92ab5685c09a1e715e2",
+      "output_sha256": "8b9b03f9777d247f5207a07c31a520a79f6d44bfcdcba92ab5685c09a1e715e2"
+    },
+    {
+      "member": "g1/csv/230509/scissor_kick_R_001__A362.csv",
+      "source_sha256": "6eaa97d282a3d86b90e66056849e7712b5be31e59a52df9857e4ef3f61e783be",
+      "frames": 565,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "b15fd03128e0b8f75025dacac187e22ca3b0e8facf18024e14f5a4480df44fe6",
+      "output_sha256": "b15fd03128e0b8f75025dacac187e22ca3b0e8facf18024e14f5a4480df44fe6"
+    },
+    {
+      "member": "g1/csv/230509/scissor_kick_R_002__A362.csv",
+      "source_sha256": "e750684288f54646bb6140cc8005dce6f47ed1135ac78f6b6150f0e030615662",
+      "frames": 556,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "02ddd065fa5673ba0d38bcda9c1827d0de12b0b32d3f6a145b89b41580613056",
+      "output_sha256": "02ddd065fa5673ba0d38bcda9c1827d0de12b0b32d3f6a145b89b41580613056"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_002__A360_M.csv",
+      "source_sha256": "defc727046b902251ed17b7c595f3dbe2722bfbc08da7152e121ee15fc6d575a",
+      "frames": 723,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "1fec7cb1547a7b54ddd73f85da3f7b4897433741e39fe5a6bf1b771befcf062d",
+      "output_sha256": "1fec7cb1547a7b54ddd73f85da3f7b4897433741e39fe5a6bf1b771befcf062d"
+    },
+    {
+      "member": "g1/csv/230509/scissor_kick_R_002__A359_M.csv",
+      "source_sha256": "51420440d3a4ef67488182eaeae476eeafdab3fcc19e819abad4223fa2fa5920",
+      "frames": 855,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "b57a68260da34965e1fb4c2f8a763724d19683b2fc479b7b7567a4c0c99f0758",
+      "output_sha256": "b57a68260da34965e1fb4c2f8a763724d19683b2fc479b7b7567a4c0c99f0758"
+    },
+    {
+      "member": "g1/csv/230509/toe_touchers_002__A361.csv",
+      "source_sha256": "b049772cf67037916c490d9c1e681f2e972b6b8ad3dcb9774ad7c36a503b0b64",
+      "frames": 856,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "fb24f6c5ada5789a1dd9c853ff4a51d47aa0b8cf07d545f9781d045ef21b6da6",
+      "output_sha256": "fb24f6c5ada5789a1dd9c853ff4a51d47aa0b8cf07d545f9781d045ef21b6da6"
+    },
+    {
+      "member": "g1/csv/230509/skipping_R_002__A361.csv",
+      "source_sha256": "373e317c2cdea02ac0bf8951a5d8a533ef0b2d5def4202fcc0d4c76bf25d4ca9",
+      "frames": 1016,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "8731ce338ab2ee14d33ffc2c56c353ce0ecc0d100df49d0de2de925499b085ab",
+      "output_sha256": "8731ce338ab2ee14d33ffc2c56c353ce0ecc0d100df49d0de2de925499b085ab"
+    },
+    {
+      "member": "g1/csv/230509/toe_touchers_001__A361_M.csv",
+      "source_sha256": "7a18cf2061afcff705531918e63d16765aa77fe9528c7301a957a7f3366b1529",
+      "frames": 969,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "db6b0001cb96af27580a24bbf84b569c70bd4441454e6d88998cc0fe21fb6cda",
+      "output_sha256": "db6b0001cb96af27580a24bbf84b569c70bd4441454e6d88998cc0fe21fb6cda"
+    },
+    {
+      "member": "g1/csv/230509/dancing_routine_V002_002__A361_M.csv",
+      "source_sha256": "71a99e96ac869a2af8aac779de8baaa4819971ddeffafa8558386092d7cf40f4",
+      "frames": 1624,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "074ed192ca4e04d037654fc475d1994d96ff32c76eaaf6ff8f62f48df5ae73aa",
+      "output_sha256": "074ed192ca4e04d037654fc475d1994d96ff32c76eaaf6ff8f62f48df5ae73aa"
+    },
+    {
+      "member": "g1/csv/230509/scissor_kick_R_003__A362.csv",
+      "source_sha256": "7de5371fa8c071ee0324ada6cce2f0150a1ad3d14251ff2c8bf4cf92772226e5",
+      "frames": 872,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "b806438d61d94a0629d67c99655f245e741f676918469b2d83d79f81b8eb6cfb",
+      "output_sha256": "b806438d61d94a0629d67c99655f245e741f676918469b2d83d79f81b8eb6cfb"
+    },
+    {
+      "member": "g1/csv/230509/scissor_kick_R_001__A359.csv",
+      "source_sha256": "dd9035c52d1b1019e570c157c494b01a6410caaed4cfb03e8731389461505899",
+      "frames": 1042,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "69a2fa7c5677a91ffff950ceacaf81e8c65cca68de651c95bc0e8c49c8dbe3bb",
+      "output_sha256": "69a2fa7c5677a91ffff950ceacaf81e8c65cca68de651c95bc0e8c49c8dbe3bb"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_002__A362.csv",
+      "source_sha256": "fb82994af0c9aece8554554de14e13ef35773f1da3b7eff1f1282c78c9c4dc58",
+      "frames": 646,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "21950a0b3987ecc0022f9e231cc56bdc52d7aba514253c0873667c55b9ee3af1",
+      "output_sha256": "21950a0b3987ecc0022f9e231cc56bdc52d7aba514253c0873667c55b9ee3af1"
+    },
+    {
+      "member": "g1/csv/230509/jog_butt_kick_R_stop_002__A360.csv",
+      "source_sha256": "ac50ccf62199b49a43023be8493936dcf07af2cbb56310e32582a754a596731c",
+      "frames": 883,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "158d4fd691610a6e24d46fd879ba9f84fef17aa1f1a0a827c64c5bf9c788fe3c",
+      "output_sha256": "158d4fd691610a6e24d46fd879ba9f84fef17aa1f1a0a827c64c5bf9c788fe3c"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_001__A359.csv",
+      "source_sha256": "ece1e42a255261b533e6321c355bac0d7219d8a8febf9c413163496adde1e0b9",
+      "frames": 1390,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "6247e88642ca36c43a97716fd0ff8d71ec123fab56234811f5cc4aa6d1949da0",
+      "output_sha256": "6247e88642ca36c43a97716fd0ff8d71ec123fab56234811f5cc4aa6d1949da0"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_003__A362.csv",
+      "source_sha256": "42086e71995c51162dc346f3e3574549cf91a5114030e4cff9598ac7e537850b",
+      "frames": 670,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "493a1a835bc79b417636855597a7cfc80ca1764d53da1176dd171194e0469619",
+      "output_sha256": "493a1a835bc79b417636855597a7cfc80ca1764d53da1176dd171194e0469619"
+    },
+    {
+      "member": "g1/csv/230509/toe_touchers_004__A361.csv",
+      "source_sha256": "b16b4f72749bcc831a59745b0c32d90e0e940d3f8febc1db8e89e3e4ba24a14f",
+      "frames": 850,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "90c951dc91aad5a41fc6c98e3973db57cfb91279bfb14e41e29c285c0c648db1",
+      "output_sha256": "90c951dc91aad5a41fc6c98e3973db57cfb91279bfb14e41e29c285c0c648db1"
+    },
+    {
+      "member": "g1/csv/230509/frog_jump_002__A359.csv",
+      "source_sha256": "5c8c5be6bdb28537e7e6b55768af0b084142e2b605542d78765b77d9d9b99d13",
+      "frames": 1474,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "bce2687ed2fb77520983e2795d6312b4fb306afa85fe1e8404ff83cd79ef3d00",
+      "output_sha256": "bce2687ed2fb77520983e2795d6312b4fb306afa85fe1e8404ff83cd79ef3d00"
+    },
+    {
+      "member": "g1/csv/230509/jog_butt_kick_R_stop_002__A360_M.csv",
+      "source_sha256": "caf9d1f12a146edb683e75265d3d29abf4cff30cc43e24d0bc9674276d8a1246",
+      "frames": 883,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "87ddb00f9d744b76e8b32dddf36abe062a7c7dd21414433d20026016d2e947ea",
+      "output_sha256": "87ddb00f9d744b76e8b32dddf36abe062a7c7dd21414433d20026016d2e947ea"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_002__A359.csv",
+      "source_sha256": "58878304522d0fbfb812ae08cbd2e21b8771a1fec8e4bc19eb45bd5e4c916231",
+      "frames": 958,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "bc71a72af131ee3657cd5e15a496686860af04bd01af80da9976c45a4f7cd23c",
+      "output_sha256": "bc71a72af131ee3657cd5e15a496686860af04bd01af80da9976c45a4f7cd23c"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_002__A361_M.csv",
+      "source_sha256": "d34af390a6ac9d6a25dcfa0bc0f3ecd20279f2df69fda77c0946c7fe5c479fc0",
+      "frames": 672,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "d001c6c151dd83ea76e2073b6d588ff6194f0b852739a45a0b0b73ae32fd34ec",
+      "output_sha256": "d001c6c151dd83ea76e2073b6d588ff6194f0b852739a45a0b0b73ae32fd34ec"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_001__A362.csv",
+      "source_sha256": "e15b5e6bc13e511cae861b6808c30d3f9925a1eda96edfe00fe239942178102f",
+      "frames": 1055,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "f8c38909eb41c797f1bb4931a0253b8ad9ea465905de0510b70e9bcb045f28e5",
+      "output_sha256": "f8c38909eb41c797f1bb4931a0253b8ad9ea465905de0510b70e9bcb045f28e5"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_003__A359.csv",
+      "source_sha256": "d4551f3efa90daf8eff2c5f803f6f974944da475673ac475d1a49a7284719bce",
+      "frames": 774,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "da5cfc4028b8ccec2f0477fe3732726809dc96fc27fd5ffa7e42d4be27d077b0",
+      "output_sha256": "da5cfc4028b8ccec2f0477fe3732726809dc96fc27fd5ffa7e42d4be27d077b0"
+    },
+    {
+      "member": "g1/csv/230509/toe_touchers_001__A360_M.csv",
+      "source_sha256": "6a561d76a7dcf2c5aca68ac17da1fc3b815d0772f21f273b6d16da245215da7c",
+      "frames": 1111,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "57361b8d3ab1fffaa7afa04187256d34f2f196fe5dfa1327ec39d604f7888477",
+      "output_sha256": "57361b8d3ab1fffaa7afa04187256d34f2f196fe5dfa1327ec39d604f7888477"
+    },
+    {
+      "member": "g1/csv/230509/scissor_kick_R_002__A360_M.csv",
+      "source_sha256": "ff2ca5dfe71ba7ea36e4f4576a8f51927d2e052fc89c681c303015f6164604bc",
+      "frames": 638,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "deeceaf5acb1879c496ebf9fa55631de9ce43bb669716a5bffe2cd3d72055898",
+      "output_sha256": "deeceaf5acb1879c496ebf9fa55631de9ce43bb669716a5bffe2cd3d72055898"
+    },
+    {
+      "member": "g1/csv/230509/toe_touchers_002__A360.csv",
+      "source_sha256": "5b6c1902e0c460602cd345c319be6867922d17ba79da14d7cc00eab1ca4fbc84",
+      "frames": 1037,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "daa6a14dcce2aea71c22196f5a0798cc54de1bb33adf558d49f9f618e258e9a0",
+      "output_sha256": "daa6a14dcce2aea71c22196f5a0798cc54de1bb33adf558d49f9f618e258e9a0"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_002__A359_M.csv",
+      "source_sha256": "e2572aa9517fb0d87e977f34a0388ce79c1ad6a1c70fa0dd174d834596cdbb1e",
+      "frames": 958,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "e5ce3440bc41ce5c6aafcd4adef718abb4f672da558002c29e38f21c80044608",
+      "output_sha256": "e5ce3440bc41ce5c6aafcd4adef718abb4f672da558002c29e38f21c80044608"
+    },
+    {
+      "member": "g1/csv/230509/ab_bicycle_002__A362_M.csv",
+      "source_sha256": "d5e6c3aea33a1e360884169d9a486f2adf875f5e339c3036a3e36e5b5b1b917d",
+      "frames": 646,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "8df492bb4efdd3fe606afc6b7713599423b1f9123086186dc377a4addad8e853",
+      "output_sha256": "8df492bb4efdd3fe606afc6b7713599423b1f9123086186dc377a4addad8e853"
+    },
+    {
+      "member": "g1/csv/230509/jog_ff_loop_180_R_003__A360.csv",
+      "source_sha256": "eaaba243244558c7b674fd15a7365fd095723ea778089c2671e1103fc56f278d",
+      "frames": 468,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "3e2cee2d835e25bba42957f5b0bff0d2fda6b78a67d9770b2957c1c991988651",
+      "output_sha256": "3e2cee2d835e25bba42957f5b0bff0d2fda6b78a67d9770b2957c1c991988651"
+    },
+    {
+      "member": "g1/csv/230509/jog_ff_loop_180_R_003__A360_M.csv",
+      "source_sha256": "d139aa4b427394009de585206fc8ee929ca4e48860afb242fb25497cdffb9a80",
+      "frames": 468,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "8630cd2bd97c461afe457686b6f25397968d924407b032064d1286501bfe615e",
+      "output_sha256": "8630cd2bd97c461afe457686b6f25397968d924407b032064d1286501bfe615e"
+    },
+    {
+      "member": "g1/csv/230509/jog_ff_loop_180_R_002__A360.csv",
+      "source_sha256": "f17392137e41b512baf4a1d82bb2f0176d4ac826803312fd012db4d06c589b5f",
+      "frames": 433,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "544192af902e39f658be3957920fbc2081359cc9e747da7be0d9a1538612ab49",
+      "output_sha256": "544192af902e39f658be3957920fbc2081359cc9e747da7be0d9a1538612ab49"
+    },
+    {
+      "member": "g1/csv/221130/inj_torso_idle_turn_360_max_003__A083_M.csv",
+      "source_sha256": "82cdf0f4daa3f8653e2a2923da7fe819a689c8fff3edff887b65605049d2a599",
+      "frames": 1695,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "2993fb1dace91529c151c4295c3752433539be2411590e260c1355eb37139488",
+      "output_sha256": "2993fb1dace91529c151c4295c3752433539be2411590e260c1355eb37139488"
+    },
+    {
+      "member": "g1/csv/240918/grab_walk_ff_180_001__A550_M.csv",
+      "source_sha256": "988ecf9f054089f56eb1449c679352642a60681562717f97435f4fdf395ecc6f",
+      "frames": 1244,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "8293be43af04c147b906c2e6ba8eda96940c6fa20ce3bc2da5b7d0d8f0b66566",
+      "output_sha256": "8293be43af04c147b906c2e6ba8eda96940c6fa20ce3bc2da5b7d0d8f0b66566"
+    },
+    {
+      "member": "g1/csv/240918/body_check_001__A548_M.csv",
+      "source_sha256": "93a53d8311d50792d6caadf2629f178af5dafbd41a03dc5e35b67c8c40f279c9",
+      "frames": 3769,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "2cdcb854e3f74c51f0bc3df92106de820b90fc90a56119836163329986e11d50",
+      "output_sha256": "2cdcb854e3f74c51f0bc3df92106de820b90fc90a56119836163329986e11d50"
+    },
+    {
+      "member": "g1/csv/230509/scissors_jump_R_003__A361.csv",
+      "source_sha256": "4c89df085abeaad5a06c2855522686b9de7a32ddf6d4fc49995d5b669a3f8a73",
+      "frames": 759,
+      "max_qpos_difference": 0.0,
+      "reference_output_sha256": "d2e42d3311bd99cc74b54b3702b624e24603fe443d0c282647ce668bd901164a",
+      "output_sha256": "d2e42d3311bd99cc74b54b3702b624e24603fe443d0c282647ce668bd901164a"
+    }
+  ]
+}

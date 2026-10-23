@@ -1,0 +1,9 @@
+{
+  "source_repository": "bones-studio/seed",
+  "archive_member": "g1/csv/230509/warm_up_legs_R_002__A359_M.csv",
+  "source_sha256": "a020c1b88855fb3d3ec0cce1d37cb416de09b3ff5af53fc9dd0b9edff03356c2",
+  "native_frame": 834,
+  "fps": 120,
+  "fixture_sha256": "3c1542f9ec97556405a1c8ced8619177a6029768860ce17e8846825a81225073",
+  "purpose": "Feasible dense IK QP incorrectly reported infeasible with root equalities in the active-set formulation. Equality null-space reduction preserves the mathematical problem and satisfies reconstructed KKT conditions."
+}

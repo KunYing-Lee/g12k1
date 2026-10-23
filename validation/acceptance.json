@@ -1,0 +1,16 @@
+{
+  "algorithm": "R9",
+  "solver_dtype": "float64",
+  "fps": 120,
+  "stationarity_normalization": "per_frame",
+  "stationarity_max": 1e-6,
+  "complementarity_normalization": "absolute",
+  "complementarity_max": 1e-6,
+  "constraint_violation_max": 1e-8,
+  "minimum_ground_gap_m": -1e-8,
+  "minimum_self_clearance_m": 0.00099999,
+  "joint_limit_violation_rad_max": 1e-8,
+  "root_xy_error_m_max": 1e-8,
+  "require_complete_finite_output": true,
+  "output_postprocessing": false
+}
