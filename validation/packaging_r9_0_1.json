@@ -1,0 +1,22 @@
+{
+  "release": "r9.0.1",
+  "change": "Explicit empty setuptools packages list for this script-based repository; no resource directory autodiscovery during CFFI native compilation.",
+  "algorithm_tag": "r9.0.0",
+  "algorithm_commit": "aacd8e9020cb4f94725e76e3b0e8179673d16c85",
+  "producer_sha256": "a283a780fb2e81bdeeea394978f66eeedf5cdf336c0a81aeb825dd27ac7950a0",
+  "numerical_files_changed": false,
+  "cold_cache_before": "Reproduced flat-layout package autodiscovery failure",
+  "cold_cache_after": "Analytic face, cap and rim distance tests pass after compiling a new extension from the repository directory",
+  "linux_full_suite": {
+    "passed": 63,
+    "failed": 0,
+    "warnings": 2,
+    "seconds": 2.91
+  },
+  "startup_incident": {
+    "host": "alpha",
+    "failed_before_solving": 96,
+    "published_motions": 0,
+    "action": "Stopped admission, retained startup failure evidence, retry same disjoint shard after package metadata correction"
+  }
+}

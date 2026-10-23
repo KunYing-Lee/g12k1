@@ -15,6 +15,8 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest -q
 
 `requirements.lock` pins all runtime packages; the test lock adds only pytest dependencies. On macOS, frame parallelism is unsupported by the current fork-based implementation; use `RETARGET_FRAME_WORKERS=1` for development. Production equivalence is certified on Linux.
 
+`r9.0.1` explicitly disables Python-package autodiscovery for this script-based repository. This fixes first-use CFFI compilation when no native cache exists; solver files, dependencies, acceptance and the numerical producer fingerprint are identical to `r9.0.0`. The cold-cache analytic geometry test reproduces the previous failure and passes with this metadata fix; all 63 Linux tests pass.
+
 ## Input and output
 
 An input manifest is a JSON array. Each entry has a unique `member`, an absolute source `path`, its `sha256`, and optionally its full `frames` count:
@@ -87,7 +89,7 @@ The benchmark runs `16×2, 32×2, 48×2, 48×2, 32×2, 16×2` on identical compl
 
 ## Measured g1 concurrency
 
-The six-run complete-motion benchmark accepted **576/576 runs** and produced exactly equal motion arrays across configurations. Each run covered **96 clips / 65,768 frames**. The fixed production code remains the `r9.0.0` tag.
+The six-run complete-motion benchmark accepted **576/576 runs** and produced exactly equal motion arrays across configurations. Each run covered **96 clips / 65,768 frames**. The numerical algorithm is fixed by `r9.0.0`; production uses `r9.0.1`, which only corrects native-extension build metadata.
 
 | Clip workers × frame workers | First run (s) | Reverse run (s) | Median (s) | Clips/hour |
 |---|---:|---:|---:|---:|

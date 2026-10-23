@@ -1,8 +1,13 @@
 [project]
 name = "g12k1"
-version = "9.0.0"
+version = "9.0.1"
 description = "Validated R9 Bones G1 to Booster K1 retargeting"
 requires-python = ">=3.11"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+# This repository is run as scripts; asset/config directories are data, not packages.
+# Explicit discovery also lets CFFI build its native extension from this directory.
+[tool.setuptools]
+packages = []
